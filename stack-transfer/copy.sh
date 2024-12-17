@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 
-REMOTE_USER="helium"
-REMOTE_HOST="helium.fdatxvault.win"
-STACK_NAME="stack-changedetection"
+# business_logic.sh - Script logic that uses sourced variables
 
-# Define an associative array to map remote directories to local destinations
-declare -A DIR_MAP=(
-    ["/home/helium/gitsource/helium/${STACK_NAME}"]="/home/shahvirb/gitsource/argon/${STACK_NAME}"
-    ["/home/helium/docker-data/changedetection"]="/home/shahvirb/docker-data/changedetection"
-)
+# Source the variables from vars.sh
+source "$(dirname "$0")/vars.sh"
 
 # Loop through each remote-local pair in the map
 for REMOTE_DIR in "${!DIR_MAP[@]}"; do
