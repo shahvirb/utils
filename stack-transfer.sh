@@ -1,11 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 REMOTE_USER="helium"
-REMOTE_HOST="helium"
+REMOTE_HOST="helium.fdatxvault.win"
+STACK_NAME="stack-changedetection"
 
 # Define an associative array to map remote directories to local destinations
 declare -A DIR_MAP=(
-    ["/home/helium/gitsource/helium/stack-openproject"]="/home/shahvirb/gitsource/argon/stack-openproject"
+    ["/home/helium/gitsource/helium/${STACK_NAME}"]="/home/shahvirb/gitsource/argon/${STACK_NAME}"
+    ["/home/helium/docker-data/changedetection"]="/home/shahvirb/docker-data/changedetection"
 )
 
 # Loop through each remote-local pair in the map
