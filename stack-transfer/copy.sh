@@ -15,7 +15,8 @@ for REMOTE_DIR in "${!DIR_MAP[@]}"; do
     mkdir -p "$LOCAL_DIR"
 
     # Execute the SCP command
-    scp -r "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR" "$LOCAL_DIR"
+    # scp -r "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR" "$LOCAL_DIR"
+    rsync -av --progress "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/" "$LOCAL_DIR/"
 
     # Check if the copy was successful
     if [ $? -eq 0 ]; then
