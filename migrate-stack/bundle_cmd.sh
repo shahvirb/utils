@@ -21,7 +21,7 @@ ARCHIVE_NAME="${STACK_NAME}_bundle_${TIMESTAMP}.tar.gz"
 echo "# Run these commands on ${REMOTE_HOST} as ${REMOTE_USER}:"
 echo ""
 echo "# Create the tar.gz archive"
-echo "tar -czf ~/${ARCHIVE_NAME} \\"
+echo "sudo tar -czf ~/${ARCHIVE_NAME} \\"
 
 # Output each directory to bundle
 for i in "${!DIRS_TO_BUNDLE[@]}"; do
