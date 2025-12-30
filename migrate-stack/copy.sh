@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# business_logic.sh - Script logic that uses sourced variables
-
-# Source the variables from vars.sh
 source "$(dirname "$0")/vars.sh"
 
 # Loop through each remote-local pair in the map
