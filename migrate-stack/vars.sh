@@ -3,8 +3,8 @@
 REMOTE_USER="helium"
 REMOTE_HOST="helium.fdatxvault.win"
 
-STACK_NAME="stack-paperless"
-DD_DIR="paperless"
+STACK_NAME="stack-joplinserver"
+DD_DIR="joplinpostgresdb"
 
 # Associative array mapping remote directories to local destinations
 # WARNING: Trailing slashes matter! 
@@ -12,5 +12,6 @@ DD_DIR="paperless"
 # - Remote path WITHOUT trailing slash (dir) copies the directory itself, creating nested folder
 declare -A DIR_MAP=(
     ["/home/helium/gitsource/helium/${STACK_NAME}/"]="/home/shahvirb/gitsource/argon/${STACK_NAME}"
-    ["/home/helium/docker-data/${DD_DIR}/"]="/home/shahvirb/docker-data/${DD_DIR}"
+    # ["/home/helium/docker-data/${DD_DIR}/"]="/home/shahvirb/docker-data/${DD_DIR}"
+    ["/home/helium/docker-data/${DD_DIR}/"]="/home/shahvirb/docker-data/joplin/db"
 )
